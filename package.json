@@ -2,9 +2,12 @@
   "name": "teskalabs_training_ui_app",
   "version": "25.1.1",
   "main": "index.js",
+  "homepage": "https://petra-vozarova.github.io/training-ui-app",
   "scripts": {
     "start": "webpack serve --config webpack/webpack.dev.js",
-    "build": "webpack --config webpack/webpack.build.js"
+    "build": "webpack --config webpack/webpack.build.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "description": "TeskaLabs Training UI App",
   "private": true,
@@ -22,6 +25,7 @@
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.13.1",
     "date-fns": "^2.30.0",
+    "gh-pages": "^6.3.0",
     "i18next": "^20.3.5",
     "i18next-browser-languagedetector": "^6.1.2",
     "react": "^17.0.0",
